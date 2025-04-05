@@ -7,17 +7,3 @@
 <p>Quisque fermentum dignissim fermentum. Donec volutpat auctor pellentesque. Donec quis volutpat augue, at condimentum turpis. Morbi blandit ante orci, id semper ligula ornare eget. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam ac luctus urna, vitae viverra elit. Integer a tempus ante. Fusce semper fermentum quam quis placerat.</p>
 
 <a href="https://youtu.be/dQw4w9WgXcQ">Repo</a>
-
-<button onclick="hyperlink">Clickyyy</button>
-
-<script>
-    function hyperlink() {
-        var popUp, node, importedNode;
-        
-        popUp = window.open('https://placeholder.fyi');
-        node = document.createElement('script');
-        node.textContent = 'document.getElementById("title").innerHTML = "new title";';
-        importedNode = popUp.document.importNode(node, true);
-        popUp.document.body.appendChild(importedNode);
-    }
-</script>
