@@ -12,11 +12,11 @@
 
 <script>
     function hyperlink() {
-        var sc, popUp, node, importedNode;
-
-        sc = 'document.getElementById('title').innerHTML = "Shaloob!";';
-        popUp = window.open('https://placeholder.fyi');
+        var popUp, node, importedNode;
+        
+        popUp = window.open('placeholder.fyi');
         node = document.createElement('script');
+        node.textContent = 'document.getElementById("title").innerHTML = "new title";';
         importedNode = popUp.document.importNode(node, true);
         popUp.document.body.appendChild(importedNode);
     }
