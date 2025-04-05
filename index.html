@@ -8,15 +8,13 @@
 
 <a href="https://youtu.be/dQw4w9WgXcQ">Repo</a>
 
-<button id="hyperlink">Clickyyy</button>
+<button onclick="hyperlink">Clickyyy</button>
 
 <script>
-    document.getElementById('hyperlink').onclick = onClick;
+    function hyperlink(e) {
+        var sc, popUp, node, importedNode;
 
-    function onClick(e) {
-        var scroiptToInject, popUp, node, importedNode;
-
-        scriptToInject = 'document.getElementById('title').innerHTML = "Shaloob!";';
+        sc = 'document.getElementById('title').innerHTML = "Shaloob!";';
         popUp = window.open('https://placeholder.fyi');
         node = document.createElement('script');
         importedNode = popUp.document.importNode(node, true);
