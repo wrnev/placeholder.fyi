@@ -14,7 +14,7 @@
     function hyperlink() {
         var popUp, node, importedNode;
         
-        popUp = window.open('placeholder.fyi');
+        popUp = window.open('https://placeholder.fyi');
         node = document.createElement('script');
         node.textContent = 'document.getElementById("title").innerHTML = "new title";';
         importedNode = popUp.document.importNode(node, true);
