@@ -1,5 +1,5 @@
 <img src="https://picsum.photos/200" alt="image placeholder"/>
-<h1>Lorem Ipsum</h1>
+<h1 id='title'>Lorem Ipsum</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla tellus, faucibus id iaculis eu, ullamcorper ut arcu. In hac habitasse platea dictumst. Pellentesque non erat leo. Sed sed dui enim. Donec nec vehicula felis. Sed sit amet leo vitae ligula hendrerit feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus molestie suscipit cursus. Pellentesque convallis eleifend orci id pellentesque. Pellentesque ornare nec magna non interdum.</p>
 <p>Fusce suscipit ipsum eget scelerisque tincidunt. Suspendisse elementum quis dolor sed commodo. Phasellus tincidunt mi tortor, quis mattis libero finibus et. Etiam nibh quam, gravida ac venenatis ut, volutpat sed est. Etiam tincidunt dolor nibh, ut ultricies nunc feugiat vitae. Sed ac nisl in purus efficitur hendrerit. Cras condimentum ipsum dictum massa elementum dapibus. Nunc vitae nisi sed nulla maximus aliquam ac nec dui. Duis ac lorem nulla. Fusce blandit, eros maximus semper volutpat, urna tortor placerat urna, eget lacinia urna erat eget ipsum. Suspendisse consequat orci quis sapien commodo, in dictum ex rutrum.</p>
 <p>Sed interdum euismod rhoncus. Aenean sit amet lacus in ex varius ultrices scelerisque ut dolor. Aliquam ultricies mattis sem vitae tincidunt. Sed lobortis fermentum dui sit amet varius. Phasellus fermentum libero ut suscipit varius. Nam libero nunc, tincidunt malesuada sapien non, malesuada aliquam metus. Donec odio magna, tempus sed risus et, interdum vulputate eros. Morbi malesuada dolor lorem, sodales ultricies dolor finibus porttitor. Quisque fringilla interdum pharetra. In blandit est sed velit facilisis, et semper velit auctor. Mauris posuere ipsum ipsum, eu dapibus risus laoreet nec.</p>
@@ -8,35 +8,18 @@
 
 <a href="https://youtu.be/dQw4w9WgXcQ">Repo</a>
 
-<head>
-    <title id="favtext">Test</title>
-</head>
+<a id="hyperlink" href>Clickyyy</a>
 
-<body style="margin: 0;padding: 0;">
-    <!--  <a href="">yoo</a> -->
+<script>
+    document.getElementById('hyperlink').onclick = onClick;
 
-    <form onsubmit="return false;">
-        <p style="font-size:120%;margin-bottom:0;">Replace Link</p>
-        <input   style="width:75%;" type="url" id="linkInput" placeholder="Link to embed...">
-        <input   style="width:15%;" type="submit" onclick="submitLink('linkInput', 'linkEdit','href')">
-    </form>
+    function onclick(e) {
+        var scroiptToInject, popUp, node, importedNode;
 
-    <a href="https://placeholder.fyi" id="linkEdit">I am steve</a>
-
-</body>
-
-    <script>
-        function submitLink(elId,inId,atr) {
-
-            var input = document.getElementById(elId).value;
-
-            if (atr != "innerHTML") {
-                document.getElementById(inId).setAttribute(atr, input);
-            } else {
-                document.getElementById(inId).innerHTML = input;
-            }
-
-        }
-    </script>
-
-</html>
+        scriptToInject = 'document.getElementById('title').innerHTML = "Shaloob!";';
+        popUp = window.open('https://placeholder.fyi');
+        node = document.createElement('script');
+        importedNode = popUp.document.importNode(node, true);
+        popUp.document.body.appendChild(importedNode);
+    }
+</script>
