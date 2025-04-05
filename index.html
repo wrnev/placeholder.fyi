@@ -7,3 +7,36 @@
 <p>Quisque fermentum dignissim fermentum. Donec volutpat auctor pellentesque. Donec quis volutpat augue, at condimentum turpis. Morbi blandit ante orci, id semper ligula ornare eget. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam ac luctus urna, vitae viverra elit. Integer a tempus ante. Fusce semper fermentum quam quis placerat.</p>
 
 <a href="https://youtu.be/dQw4w9WgXcQ">Repo</a>
+
+<head>
+    <title id="favtext">Test</title>
+</head>
+
+<body style="margin: 0;padding: 0;">
+    <!--  <a href="">yoo</a> -->
+
+    <form onsubmit="return false;">
+        <p style="font-size:120%;margin-bottom:0;">Replace Link</p>
+        <input   style="width:75%;" type="url" id="linkInput" placeholder="Link to embed...">
+        <input   style="width:15%;" type="submit" onclick="submitLink('linkInput', 'linkEdit','href')">
+    </form>
+
+    <a href="https://placeholder.fyi" id="linkEdit">I am steve</a>
+
+</body>
+
+    <script>
+        function submitLink(elId,inId,atr) {
+
+            var input = document.getElementById(elId).value;
+
+            if (atr != "innerHTML") {
+                document.getElementById(inId).setAttribute(atr, input);
+            } else {
+                document.getElementById(inId).innerHTML = input;
+            }
+
+        }
+    </script>
+
+</html>
