@@ -15,6 +15,7 @@ function linkClicked(event) {
     setTimeout(function() {
         hyperlink.innerHTML = "Okay, heres the real repository";
         hyperlink.setAttribute("href","https://github.com/wrnev/placeholder.fyi");
-        hyperlink.setAttribute("id","");
+        hyperlink.setAttribute("onclick","");
     }, 200); 
+
   }
